@@ -157,6 +157,8 @@ str(DTI)
 # $ z     : int  24 24 24 24 24 24 24 24 24 24 ...
 # $ Zscore: num  -2.016 -0.802 -0.525 -0.382 0.763 ...
 
+# NOT SAVED
+
 #' ## Galaxy data of Table 8.5 (`galaxy`)
 
 #' Table of counts of galaxies binned into categories defined by redshift and magnitude
@@ -186,6 +188,10 @@ galaxy.df <- galaxy.tab |>
 
 str(galaxy.df)
 
+# use this form
+galaxy <- galaxy.df
+
+save(galaxy, file = here::here("data", "galaxy.RData"))
 
 
 #' ## MNIST handwritten digit database
@@ -214,6 +220,9 @@ str(galaxy.df)
 haplotype <- read.csv("http://hastie.su.domains/CASI_files/DATA/haplotype.csv")
 names(haplotype)
 
+save(haplotype, file = here::here("data", "haplotype.RData"))
+
+
 #' ## Insurance data of Table 9.1 (`insurance`)
 #'
 #' Insurance company life table.
@@ -222,6 +231,9 @@ names(haplotype)
 insurance <- read.table("http://hastie.su.domains/CASI_files/DATA/insurance.txt",
                         header=TRUE)
 str(insurance)
+
+save(insurance, file = here::here("data", "insurance.RData"))
+
 
 #' ## Leukemia data (`leukemia_small`)
 
@@ -248,6 +260,9 @@ str(insurance)
 
 leukemia_small <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_small.csv")
 names(leukemia_small)
+
+save(leukemia_small, file = here::here("data", "leukemia_small.RData"))
+
 
 #' ## NCOG data of Section 9.2 (`ncog`)
 
