@@ -384,6 +384,8 @@ protein_label <- scan("http://hastie.su.domains/CASI_files/DATA/protein_label.tx
                       what=0)
 dim(protein_label)
 
+# TODO: Combine protein_kernel with protein_label into a single dataset `protein`
+
 #' ## Spam data Table 8.3, and Chapter 16 (`SPAM`)
 #'
 #' Email spam data. 4601 email messages sent to "George" at HP-Labs.
@@ -407,6 +409,8 @@ SPAM <- read.csv("http://hastie.su.domains/CASI_files/DATA/SPAM.csv")
 dim(SPAM)
 names(SPAM)
 
+# TODO: Clean names
+
 #' ## Student score data of tables 3.1 and 10.1 (`student_score`)
 
 #' student_score.txt is the 22x5 matrix of student scores as used in Table 10.1 and Table 3.1.
@@ -414,6 +418,9 @@ names(SPAM)
 student_score <- read.table("http://hastie.su.domains/CASI_files/DATA/student_score.txt",
                             header=TRUE)
 str(student_score)
+
+save(student_score, file = here::here("data", "student_score.RData"))
+
 
 #' ## Supernova data of Figure 12.1 and Table 12.1 (`supernova`)
 
@@ -430,6 +437,9 @@ str(student_score)
 supernova <- read.table("http://hastie.su.domains/CASI_files/DATA/supernova.txt", header=TRUE)
 str(supernova)
 
+save(supernova, file = here::here("data", "supernova.RData"))
+
+
 
 #' ## Vasoconstriction data of Table 13.2 (`vasoconstriction`)
 
@@ -441,6 +451,7 @@ vasoconstriction <- read.table("http://hastie.su.domains/CASI_files/DATA/vasocon
                                header=TRUE)
 str(vasoconstriction)
 
+save(vasoconstriction, file = here::here("data", "vasoconstriction.RData"))
 
 
 
