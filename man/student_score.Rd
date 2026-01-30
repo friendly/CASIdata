@@ -8,17 +8,14 @@
 A data frame with 22 rows and 5 variables:
 \describe{
 \item{mech}{Mechanics exam score}
-\item{vect}{Vectors exam score}
-\item{alge}{Algebra exam score}
-\item{anal}{Analysis exam score}
+\item{vecs}{Vectors exam score}
+\item{alg}{Algebra exam score}
+\item{analy}{Analysis exam score}
 \item{stat}{Statistics exam score}
 }
 }
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/student_score.txt}
-}
-\usage{
-student_score
 }
 \description{
 Test scores for 22 students on 5 different exams, from Tables 3.1 and 10.1.
@@ -27,4 +24,3 @@ Test scores for 22 students on 5 different exams, from Tables 3.1 and 10.1.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Tables 3.1 and 10.1.
 }
-\keyword{datasets}

@@ -14,9 +14,6 @@ A data frame with 39 rows and 2 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/vasoconstriction.txt}
 }
-\usage{
-vasoconstriction
-}
 \description{
 Data on vasoconstriction (lung constriction) response, from Table 13.2.
 }
@@ -24,4 +21,3 @@ Data on vasoconstriction (lung constriction) response, from Table 13.2.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 13.2.
 }
-\keyword{datasets}

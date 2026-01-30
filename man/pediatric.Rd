@@ -19,9 +19,6 @@ A data frame with 1620 rows and 7 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/pediatric.txt}
 }
-\usage{
-pediatric
-}
 \description{
 Survival data on 1620 children with cancer, from Section 9.4 and Table 9.6.
 }
@@ -29,4 +26,3 @@ Survival data on 1620 children with cancer, from Section 9.4 and Table 9.6.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 9.4, Table 9.6.
 }
-\keyword{datasets}

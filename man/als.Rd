@@ -15,9 +15,6 @@ A data frame with 1822 rows and 371 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/ALS.txt}
 }
-\usage{
-als
-}
 \description{
 Data on amyotrophic lateral sclerosis (Lou Gehrig's disease) from Section 17.2.
 There are 1822 observations on individuals with ALS. The goal is to predict the
@@ -34,4 +31,3 @@ trees, not too different from random forests.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 17.2.
 }
-\keyword{datasets}

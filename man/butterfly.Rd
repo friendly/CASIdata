@@ -14,9 +14,6 @@ A data frame with 24 rows and 2 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/butterfly.txt}
 }
-\usage{
-butterfly
-}
 \description{
 Number of butterfly species seen a given number of times each in two years of trapping.
 From Table 6.2. This is a frequency data frame.
@@ -25,4 +22,3 @@ From Table 6.2. This is a frequency data frame.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 6.2.
 }
-\keyword{datasets}

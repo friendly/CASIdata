@@ -13,9 +13,6 @@ A data frame with 2749 rows and 1 variable:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/police.txt}
 }
-\usage{
-police
-}
 \description{
 Z scores for 2749 New York City police officers, from Figure 15.7. A large
 value suggests racial bias in policing behavior.
@@ -24,4 +21,3 @@ value suggests racial bias in policing behavior.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 15.7.
 }
-\keyword{datasets}

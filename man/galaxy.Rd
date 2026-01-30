@@ -15,9 +15,6 @@ A data frame with 270 rows and 3 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/galaxy.txt}
 }
-\usage{
-galaxy
-}
 \description{
 Counts of galaxies binned by redshift and magnitude, from Table 8.5. The data
 have been reshaped into long format with variables for magnitude, redshift
@@ -27,4 +24,3 @@ category, and frequency count.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 8.5.
 }
-\keyword{datasets}

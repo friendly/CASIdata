@@ -14,9 +14,6 @@ A data frame with 844 rows and 2 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/nodes.txt}
 }
-\usage{
-nodes
-}
 \description{
 Data on lymph nodes removed from 844 cancer patients, from Figure 6.3.
 }
@@ -24,4 +21,3 @@ Data on lymph nodes removed from 844 cancer patients, from Figure 6.3.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 6.3.
 }
-\keyword{datasets}

@@ -16,9 +16,6 @@ A data frame with 25 rows and 4 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/cellinfusion.txt}
 }
-\usage{
-cellinfusion
-}
 \description{
 Human cell colonies infused with mouse nuclei in 5 different ratios over 1 to 5 days.
 From Table 8.2.
@@ -27,4 +24,3 @@ From Table 8.2.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 8.2.
 }
-\keyword{datasets}

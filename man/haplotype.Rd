@@ -14,9 +14,6 @@ A data frame with 197 rows and 101 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/haplotype.csv}
 }
-\usage{
-haplotype
-}
 \description{
 Genotype data for 197 US individuals from 4 racial groups (African American,
 European, Japanese, and African) at 100 SNP locations. From Section 13.5.
@@ -25,4 +22,3 @@ European, Japanese, and African) at 100 SNP locations. From Section 13.5.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 13.5.
 }
-\keyword{datasets}

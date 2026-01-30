@@ -11,9 +11,6 @@ indicate the class label (ALL or AML) for each patient.
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/leukemia_small.csv}
 }
-\usage{
-leukemia_small
-}
 \description{
 Gene expression measurements on 72 leukemia patients: 47 ALL (acute lymphoblastic
 leukemia) and 25 AML (acute myeloid leukemia). From the landmark Golub et al. (1999)
@@ -29,4 +26,3 @@ and Class Prediction by Gene Expression Monitoring. \emph{Science}, 286, 531-537
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 19.1.
 }
-\keyword{datasets}

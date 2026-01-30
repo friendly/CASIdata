@@ -10,13 +10,13 @@ A data frame with survival time information and variables:
 \item{t}{Time in months until death or censoring}
 \item{d}{Death indicator: 1 = death observed, 0 = censored}
 \item{arm}{Treatment arm: "A" = Chemotherapy, "B" = Chemotherapy + Radiation}
+\item{day}{Day of event/censoring}
+\item{month}{Month of event/censoring}
+\item{year}{Year of event/censoring}
 }
 }
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/ncog.txt}
-}
-\usage{
-ncog
 }
 \description{
 Head and neck cancer survival data from the Northern California Oncology Group
@@ -26,4 +26,3 @@ Head and neck cancer survival data from the Northern California Oncology Group
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 9.2.
 }
-\keyword{datasets}

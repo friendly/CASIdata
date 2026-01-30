@@ -15,9 +15,6 @@ A data frame with rows for each age group and 3 variables:
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/insurance.txt}
 }
-\usage{
-insurance
-}
 \description{
 Insurance company life table from Table 9.1. At each age, gives the number of
 policy holders and the number of deaths.
@@ -26,4 +23,3 @@ policy holders and the number of deaths.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 9.1.
 }
-\keyword{datasets}

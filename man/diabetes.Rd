@@ -5,8 +5,9 @@
 \alias{diabetes}
 \title{Diabetes Data}
 \format{
-A data frame with 442 rows and 11 variables:
+A data frame with 442 rows and 12 variables:
 \describe{
+\item{X}{Row index}
 \item{age}{Age of patient}
 \item{sex}{Sex of patient}
 \item{bmi}{Body mass index}
@@ -22,9 +23,6 @@ A data frame with 442 rows and 11 variables:
 }
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/diabetes.csv}
-}
-\usage{
-diabetes
 }
 \description{
 Data from 442 diabetes patients used in Section 7.3. The response is a quantitative
@@ -45,4 +43,3 @@ Efron, B., Hastie, T., Johnstone, I. and Tibshirani, R. (2004). Least Angle Regr
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 7.3.
 }
-\keyword{datasets}

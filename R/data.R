@@ -117,8 +117,9 @@ NULL
 #'
 #' @name diabetes
 #' @docType data
-#' @format A data frame with 442 rows and 11 variables:
+#' @format A data frame with 442 rows and 12 variables:
 #' \describe{
+#'   \item{X}{Row index}
 #'   \item{age}{Age of patient}
 #'   \item{sex}{Sex of patient}
 #'   \item{bmi}{Body mass index}
@@ -256,6 +257,9 @@ NULL
 #'   \item{t}{Time in months until death or censoring}
 #'   \item{d}{Death indicator: 1 = death observed, 0 = censored}
 #'   \item{arm}{Treatment arm: "A" = Chemotherapy, "B" = Chemotherapy + Radiation}
+#'   \item{day}{Day of event/censoring}
+#'   \item{month}{Month of event/censoring}
+#'   \item{year}{Year of event/censoring}
 #' }
 #'
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/ncog.txt}
@@ -373,9 +377,9 @@ NULL
 #' @format A data frame with 22 rows and 5 variables:
 #' \describe{
 #'   \item{mech}{Mechanics exam score}
-#'   \item{vect}{Vectors exam score}
-#'   \item{alge}{Algebra exam score}
-#'   \item{anal}{Analysis exam score}
+#'   \item{vecs}{Vectors exam score}
+#'   \item{alg}{Algebra exam score}
+#'   \item{analy}{Analysis exam score}
 #'   \item{stat}{Statistics exam score}
 #' }
 #'
@@ -395,8 +399,17 @@ NULL
 #' @docType data
 #' @format A data frame with 39 rows and 11 variables:
 #' \describe{
-#'   \item{magnitude}{Actual observed magnitude of the supernova}
-#'   \item{E1, E2, ..., E10}{Spectral energy in 10 different frequency bands}
+#'   \item{Magnitude}{Actual observed magnitude of the supernova}
+#'   \item{E1}{Spectral energy in frequency band 1}
+#'   \item{E2}{Spectral energy in frequency band 2}
+#'   \item{E3}{Spectral energy in frequency band 3}
+#'   \item{E4}{Spectral energy in frequency band 4}
+#'   \item{E5}{Spectral energy in frequency band 5}
+#'   \item{E6}{Spectral energy in frequency band 6}
+#'   \item{E7}{Spectral energy in frequency band 7}
+#'   \item{E8}{Spectral energy in frequency band 8}
+#'   \item{E9}{Spectral energy in frequency band 9}
+#'   \item{E10}{Spectral energy in frequency band 10}
 #' }
 #'
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/supernova.txt}

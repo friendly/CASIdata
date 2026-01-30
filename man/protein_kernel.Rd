@@ -10,9 +10,6 @@ A 1708 x 1708 numeric matrix of inner products.
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt}
 }
-\usage{
-protein_kernel
-}
 \description{
 A 1708 x 1708 inner-product (kernel) matrix derived from 1708 human proteins,
 from Section 19.6. Each protein is represented using a bag of N-grams (N=4)
@@ -28,4 +25,3 @@ String Kernels for SVM Protein Classification. \emph{Advances in NIPS 15}.
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 19.6.
 }
-\keyword{datasets}
