@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rscript:*)",
+      "Bash(\"C:/R/R-4.5.1/bin/Rscript.exe\":*)",
+      "Bash(\"C:/R/R-4.5.1/bin/Rscript.exe\" -e \"devtools::document\\(\\)\")"
+    ]
+  }
+}
