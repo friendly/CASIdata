@@ -5,10 +5,11 @@
 \alias{haplotype}
 \title{Human Ancestry Haplotype Data}
 \format{
-A data frame with 197 rows and 101 variables:
+A data frame with 197 rows and 102 variables:
 \describe{
-\item{group}{Racial/ethnic group identifier}
-\item{SNP1, SNP2, ...}{Genotype values (0, 1, or 2) at each SNP location, with NA for missing values}
+\item{X}{Row index}
+\item{race}{Racial/ethnic group identifier}
+\item{Snp1, Snp2, ..., Snp100}{Genotype values (0, 1, or 2) at each SNP location, with NA for missing values}
 }
 }
 \source{
