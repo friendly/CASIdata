@@ -2,7 +2,8 @@ Package: CASI
 Title: Datasets from Computer Age Statistical Inference
 Version: 0.0.0.9000
 Authors@R: 
-    person("Michael", "Friendly", , "friendly@yorku.ca, role = c("aut", "cre"))
+    person("Michael", "Friendly",
+           email = "friendly@yorku.ca", role = c("aut", "cre"))
 Description: Provides the datasets from Efron & Hastie, Computer Age Statistical Inference in an accessible format.
 License: GPL (>= 3)
 Encoding: UTF-8
