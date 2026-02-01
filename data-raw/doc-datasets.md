@@ -6,7 +6,6 @@ The following datasets appear in `CASI-save.R` but are **not** included in the p
 
 | Dataset | Reason |
 |---------|--------|
-| `baseball` | Script saves it, but file not present in `data/` |
 | `DTI` | Explicitly marked "NOT SAVED" in script (issue with extra `X` column) |
 | `prostmat` | Marked "NOT saved" - needs variable name cleanup (control.1 -> control.01) |
 | `protein_label` | Not saved; TODO note suggests combining with `protein_kernel` |

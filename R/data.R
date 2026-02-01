@@ -50,8 +50,9 @@ NULL
 #'
 #' @name baseball
 #' @docType data
-#' @format A data frame with 18 rows and 2 variables:
+#' @format A data frame with 18 rows and 3 variables:
 #' \describe{
+#'   \item{Player}{Player ID number}
 #'   \item{MLE}{Batting average based on the first 90 at-bats of the season}
 #'   \item{TRUTH}{Batting average for the remainder of the 1970 season}
 #' }
@@ -177,6 +178,28 @@ NULL
 #'
 #' Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 7.3.
+NULL
+
+
+#' DTI Brain Imaging Data
+#'
+#' Diffusion Tensor Imaging (DTI) data comparing 6 dyslexic children with 6 normal
+#' controls, from Figures 15.9 and 15.10. Z scores were computed at 15,443
+#' three-dimensional brain coordinates (voxels).
+#'
+#' @name DTI
+#' @docType data
+#' @format A data frame with 15443 rows and 4 variables:
+#' \describe{
+#'   \item{x}{Voxel coordinate: back to front}
+#'   \item{y}{Voxel coordinate: left to right}
+#'   \item{z}{Voxel coordinate: bottom to top}
+#'   \item{Zscore}{Z score comparing dyslexic vs normal controls at this voxel}
+#' }
+#'
+#' @source \url{https://hastie.su.domains/CASI_files/DATA/DTI.csv}
+#' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
+#'   Cambridge University Press, Figures 15.9 and 15.10.
 NULL
 
 
@@ -361,6 +384,27 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/police.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 15.7.
+NULL
+
+
+#' Prostate Cancer Gene Expression Matrix
+#'
+#' Gene expression data for 6033 genes measured on 102 subjects: 50 healthy controls
+#' and 52 prostate cancer patients. From Section 3.3, discussed at the top of page 33.
+#'
+#' @name prostmat
+#' @docType data
+#' @format A data frame with 6033 rows (genes) and 102 columns (subjects).
+#' The first 50 columns (\code{control00} through \code{control49}) contain
+#' genetic activity measurements for the control subjects. The last 52 columns
+#' (\code{cancer00} through \code{cancer51}) contain measurements for the
+#' prostate cancer subjects.
+#'
+#' @seealso \code{\link{prostz}} for the z-values comparing cancer vs control
+#'
+#' @source \url{https://hastie.su.domains/CASI_files/DATA/prostmat.csv}
+#' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
+#'   Cambridge University Press, Section 3.3.
 NULL
 
 

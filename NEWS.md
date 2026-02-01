@@ -2,6 +2,8 @@
 
 * Create R documentation in roxygen format under `R/data.R`
 * Fix codoc problems, to better describe what is in the datasets
+* Added `baseball` dataset
+* Added `DTI` dataset
 
 ## CASI 0.0.1
 

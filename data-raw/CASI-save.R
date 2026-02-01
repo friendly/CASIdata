@@ -343,7 +343,24 @@ save(police, file = here::here("data", "police.RData"))
 prostmat <- read.csv("http://hastie.su.domains/CASI_files/DATA/prostmat.csv")
 names(prostmat)
 
-#' NOT saved. Should make variable names control.1 -> control.01, etc
+# > names(prostmat)
+#   [1] "control"    "control.1"  "control.2"  "control.3"  "control.4"  "control.5"  "control.6"  "control.7"  "control.8"
+#  [10] "control.9"  "control.10" "control.11" "control.12" "control.13" "control.14" "control.15" "control.16" "control.17"
+#  [19] "control.18" "control.19" "control.20" "control.21" "control.22" "control.23" "control.24" "control.25" "control.26"
+#  [28] "control.27" "control.28" "control.29" "control.30" "control.31" "control.32" "control.33" "control.34" "control.35"
+#  [37] "control.36" "control.37" "control.38" "control.39" "control.40" "control.41" "control.42" "control.43" "control.44"
+#  [46] "control.45" "control.46" "control.47" "control.48" "control.49" "cancer"     "cancer.1"   "cancer.2"   "cancer.3"
+#  [55] "cancer.4"   "cancer.5"   "cancer.6"   "cancer.7"   "cancer.8"   "cancer.9"   "cancer.10"  "cancer.11"  "cancer.12"
+#  [64] "cancer.13"  "cancer.14"  "cancer.15"  "cancer.16"  "cancer.17"  "cancer.18"  "cancer.19"  "cancer.20"  "cancer.21"
+#  [73] "cancer.22"  "cancer.23"  "cancer.24"  "cancer.25"  "cancer.26"  "cancer.27"  "cancer.28"  "cancer.29"  "cancer.30"
+#  [82] "cancer.31"  "cancer.32"  "cancer.33"  "cancer.34"  "cancer.35"  "cancer.36"  "cancer.37"  "cancer.38"  "cancer.39"
+#  [91] "cancer.40"  "cancer.41"  "cancer.42"  "cancer.43"  "cancer.44"  "cancer.45"  "cancer.46"  "cancer.47"  "cancer.48"
+# [100] "cancer.49"  "cancer.50"  "cancer.51"
+
+
+#' NOT SAVED. Should make variable names control.1 -> control.01, etc so they sort properly. But there are also
+#' two variables with no suffix: `control` and `cancer`. Perhaps these should be `control00` and `cancer00`
+#' which makes sense in relation to the description: 50 controls and 52 cancer patients.
 
 #' `prostz` is the vector of 6033 z-values pictured in Figure 3.4. These were obtained as describe on page 272.
 #'
@@ -356,6 +373,8 @@ prostz <- prostz |>
 str(prostz)
 
 save(prostz, file = here::here("data", "prostz.RData"))
+
+
 
 #' ## Protein classification Section 19.6 (`protein_kernel`, `protein_label`)
 
@@ -402,14 +421,19 @@ dim(protein_label)
 #'
 #' Our data matrix has 59 columns:
 #'   `spam` Logical variable, `TRUE` is spam, `FALSE` is ham (good email).
-#' testid Logical variable. An optional split into train (FALSE) and test (TRUE) data (as used in, for example "Elements of Statistical Learning").
+#' `testid` Logical variable. An optional split into train (FALSE) and test (TRUE) data (as used in, for example "Elements of Statistical Learning").
 #' The remainder of the columns are features used to build a prediction model.
 
 SPAM <- read.csv("http://hastie.su.domains/CASI_files/DATA/SPAM.csv")
 dim(SPAM)
 names(SPAM)
 
-# TODO: Clean names
+# NOT SAVED
+# TODO: The names of variables in this dataset are a mess. The description above says that these are 57 features related
+#      to the most commonly used, non-trivial words, but some of these are quite mysterious (`X000`, `X650`, ) or
+#      ill-formed for variable names in R (`ch.`, `ch..1`, ...). Perfhaps consult the UC Irvine data repository.
+#
+#
 
 #' ## Student score data of tables 3.1 and 10.1 (`student_score`)
 
