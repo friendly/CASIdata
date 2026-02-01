@@ -1,0 +1,127 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# CASI
+
+<!-- badges: start -->
+[![CRAN_Status](http://www.r-pkg.org/badges/version/CASI)](https://cran.r-project.org/package=CASI)
+[![Last Commit](https://img.shields.io/github/last-commit/friendly/CASI)](https://github.com/friendly/CASI)
+<!-- badges: end -->
+
+CASI provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
+for those who want to use them for study or to try to reproduce analyses from the book.
+They were downloaded from Trevor Hastie's web site, http://hastie.su.domains/CASI_files/DATA/,
+but quite a few files were messy and required some processing to make into R datasets.
+
+Even so, some of the datasets may require data cleaning, renaming of variables, re-shaping or
+other tidying steps to be useful for analysis. But that's part of learning.
+
+## Installation
+
+This package is not yet on CRAN. You can install it from this GitHub repo:
+
+``` r
+remotes::install.github("friendly/CASI")
+```
+
+## Datasets included here
+
+```{r datasets, echo=FALSE, results='asis'}
+# Get dataset names from data/ directory
+data_files <- list.files("data", pattern = "\\.RData$", full.names = FALSE)
+dataset_names <- sub("\\.RData$", "", data_files)
+
+# Parse R/data.R to extract titles
+doc_lines <- readLines("R/data.R")
+
+# Find titles by looking for #' Title line followed eventually by #' @name
+get_title <- function(name, lines) {
+  # Find the @name line for this dataset
+  name_pattern <- paste0("^#' @name ", name, "$")
+  name_idx <- grep(name_pattern, lines)
+  if (length(name_idx) == 0) return(NA)
+
+
+  # Search backwards for the title (first #' line after a NULL or start)
+  # The title is typically the first non-empty roxygen line of the block
+  for (i in (name_idx[1] - 1):1) {
+    if (grepl("^NULL$", lines[i]) || grepl("^#' @", lines[i])) next
+    if (grepl("^#'\\s*$", lines[i])) next
+    if (grepl("^#' ", lines[i])) {
+      # Check if this looks like a title (not a @tag, not a continuation)
+      title <- sub("^#' ", "", lines[i])
+      if (!grepl("^@", title) && !grepl("^\\\\", title)) {
+        return(title)
+      }
+    }
+    if (!grepl("^#'", lines[i])) break
+  }
+  return(NA)
+}
+
+# Build data frame of datasets and titles
+datasets_df <- data.frame(
+  Dataset = paste0("`", dataset_names, "`"),
+  Title = sapply(dataset_names, function(n) get_title(n, doc_lines)),
+  stringsAsFactors = FALSE
+)
+
+# Print as markdown table
+knitr::kable(datasets_df, row.names = FALSE)
+```
+
+## Missing Datasets
+
+The following datasets appear in `data-raw/CASI-save.R` but are **not** (yet) included in the package:
+
+| Dataset | Reason |
+|---------|--------|
+| `DTI` | Explicitly marked "NOT SAVED" in script (issue with extra `X` column) |
+| `prostmat` | Marked "NOT saved" - needs variable name cleanup (control.1 -> control.01) |
+| `protein_label` | Not saved; TODO note suggests combining with `protein_kernel` |
+| `SPAM` | Script doesn't save it; TODO note about cleaning names |
+
+
+## External Datasets (Not Included)
+
+These large datasets are referenced in the book but hosted externally:
+
+- **CIFAR-100**: 100 image classes, 600 images each (32x32x3 color)
+  - Source: https://www.cs.toronto.edu/~kriz/cifar.html
+
+- **MNIST**: Handwritten digit database, 60K training + 10K test images (28x28 grayscale)
+  - Source: http://yann.lecun.com/exdb/mnist/
+
+- **leukemia_big**: 7128 x 72 gene expression matrix (10MB)
+  - Available from: https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv
+
+## Variable Renaming
+
+Some datasets had variables renamed for clarity:
+
+| Dataset | Original | Renamed |
+|---------|----------|---------|
+| `butterfly` | x, y | k, count |
+| `police` | X2.411 | z |
+| `prostz` | X1.47236666651029 | z |
+| `galaxy` | Reshaped from wide to long format with `mag`, `red`, `freq` |
+
+
+## Example
+
+No examples yet.
+
+``` r
+library(CASI)
+## basic example code
+```

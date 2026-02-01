@@ -12,16 +12,53 @@
 #'
 #' @name als
 #' @docType data
-#' @format A data frame with 1822 rows and 371 variables:
-#' \describe{
-#'   \item{testset}{Logical variable indicating training (FALSE) or test (TRUE) set}
-#'   \item{dFRS}{Response variable: rate of progression of functional rating score}
-#'   \item{...}{369 predictor variables based on patient visit measurements}
+#' @format A data frame with 1822 rows and 371 variables. The key variables are
+#' \code{testset} (logical indicator for training/test split) and \code{dFRS}
+#' (response: rate of progression of the ALS functional rating score). The 369
+#' predictor variables include:
+#' \itemize{
+#'   \item Demographics: \code{Age}, \code{Sex.Male}, \code{Sex.Female}, and
+#'     race indicators (\code{Race...Caucasian}, \code{Race...Asian}, etc.)
+#'   \item Family history of neurological diseases in relatives (e.g.,
+#'     \code{Father}, \code{Mother}, \code{Brother}, \code{Sister})
+#'   \item Neurological disease indicators (e.g., \code{Neurological.Disease.ALS},
+#'     \code{Neurological.Disease.PARKINSON.S.DISEASE})
+#'   \item Site of onset (\code{Site.of.Onset.Onset..Bulbar},
+#'     \code{Site.of.Onset.Onset..Limb})
+#'   \item Symptoms (\code{Symptom.Atrophy}, \code{Symptom.Cramps},
+#'     \code{Symptom.Fasciculations}, \code{Symptom.Speech}, etc.)
+#'   \item Study arm indicators (\code{Study.Arm.ACTIVE}, \code{Study.Arm.PLACEBO})
+#'   \item Clinical measurements with summary statistics (first, last, min, max,
+#'     mean, sd, slope): ALSFRS scores, blood pressure, forced/slow vital capacity
+#'     (\code{fvc.liters}, \code{svc.liters}), respiratory rate, weight, height
+#'   \item ALSFRS subscale items: \code{climbing.stairs}, \code{cutting},
+#'     \code{dressing}, \code{handwriting}, \code{salivation}, \code{speech},
+#'     \code{swallowing}, \code{turning}, \code{walking}
 #' }
 #'
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/ALS.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 17.2.
+NULL
+
+
+#' Baseball Batting Averages
+#'
+#' Batting averages for 18 Major League players in the 1970 season, from Table 7.1.
+#' This dataset illustrates empirical Bayes estimation, where early-season performance
+#' is used to predict full-season batting averages.
+#'
+#' @name baseball
+#' @docType data
+#' @format A data frame with 18 rows and 2 variables:
+#' \describe{
+#'   \item{MLE}{Batting average based on the first 90 at-bats of the season}
+#'   \item{TRUTH}{Batting average for the remainder of the 1970 season}
+#' }
+#'
+#' @source \url{https://hastie.su.domains/CASI_files/DATA/baseball.txt}
+#' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
+#'   Cambridge University Press, Table 7.1.
 NULL
 
 
@@ -190,12 +227,11 @@ NULL
 #'
 #' @name haplotype
 #' @docType data
-#' @format A data frame with 197 rows and 102 variables:
-#' \describe{
-#'   \item{X}{Row index}
-#'   \item{race}{Racial/ethnic group identifier}
-#'   \item{Snp1, Snp2, ..., Snp100}{Genotype values (0, 1, or 2) at each SNP location, with NA for missing values}
-#' }
+#' @format A data frame with 197 rows and 102 variables. The first column
+#' \code{X} is a row index, \code{race} is the racial/ethnic group identifier,
+#' and the remaining 100 columns (\code{Snp1} through \code{Snp100}) contain
+#' genotype values (0, 1, or 2) at each SNP location, with \code{NA} for
+#' missing values.
 #'
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/haplotype.csv}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.

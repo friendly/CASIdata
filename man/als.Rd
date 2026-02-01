@@ -5,11 +5,28 @@
 \alias{als}
 \title{ALS Data}
 \format{
-A data frame with 1822 rows and 371 variables:
-\describe{
-\item{testset}{Logical variable indicating training (FALSE) or test (TRUE) set}
-\item{dFRS}{Response variable: rate of progression of functional rating score}
-\item{...}{369 predictor variables based on patient visit measurements}
+A data frame with 1822 rows and 371 variables. The key variables are
+\code{testset} (logical indicator for training/test split) and \code{dFRS}
+(response: rate of progression of the ALS functional rating score). The 369
+predictor variables include:
+\itemize{
+\item Demographics: \code{Age}, \code{Sex.Male}, \code{Sex.Female}, and
+race indicators (\code{Race...Caucasian}, \code{Race...Asian}, etc.)
+\item Family history of neurological diseases in relatives (e.g.,
+\code{Father}, \code{Mother}, \code{Brother}, \code{Sister})
+\item Neurological disease indicators (e.g., \code{Neurological.Disease.ALS},
+\code{Neurological.Disease.PARKINSON.S.DISEASE})
+\item Site of onset (\code{Site.of.Onset.Onset..Bulbar},
+\code{Site.of.Onset.Onset..Limb})
+\item Symptoms (\code{Symptom.Atrophy}, \code{Symptom.Cramps},
+\code{Symptom.Fasciculations}, \code{Symptom.Speech}, etc.)
+\item Study arm indicators (\code{Study.Arm.ACTIVE}, \code{Study.Arm.PLACEBO})
+\item Clinical measurements with summary statistics (first, last, min, max,
+mean, sd, slope): ALSFRS scores, blood pressure, forced/slow vital capacity
+(\code{fvc.liters}, \code{svc.liters}), respiratory rate, weight, height
+\item ALSFRS subscale items: \code{climbing.stairs}, \code{cutting},
+\code{dressing}, \code{handwriting}, \code{salivation}, \code{speech},
+\code{swallowing}, \code{turning}, \code{walking}
 }
 }
 \source{

@@ -5,12 +5,11 @@
 \alias{haplotype}
 \title{Human Ancestry Haplotype Data}
 \format{
-A data frame with 197 rows and 102 variables:
-\describe{
-\item{X}{Row index}
-\item{race}{Racial/ethnic group identifier}
-\item{Snp1, Snp2, ..., Snp100}{Genotype values (0, 1, or 2) at each SNP location, with NA for missing values}
-}
+A data frame with 197 rows and 102 variables. The first column
+\code{X} is a row index, \code{race} is the racial/ethnic group identifier,
+and the remaining 100 columns (\code{Snp1} through \code{Snp100}) contain
+genotype values (0, 1, or 2) at each SNP location, with \code{NA} for
+missing values.
 }
 \source{
 \url{https://hastie.su.domains/CASI_files/DATA/haplotype.csv}
