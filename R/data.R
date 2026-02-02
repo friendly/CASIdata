@@ -387,27 +387,6 @@ NULL
 NULL
 
 
-#' Prostate Cancer Gene Expression Matrix
-#'
-#' Gene expression data for 6033 genes measured on 102 subjects: 50 healthy controls
-#' and 52 prostate cancer patients. From Section 3.3, discussed at the top of page 33.
-#'
-#' @name prostmat
-#' @docType data
-#' @format A data frame with 6033 rows (genes) and 102 columns (subjects).
-#' The first 50 columns (\code{control00} through \code{control49}) contain
-#' genetic activity measurements for the control subjects. The last 52 columns
-#' (\code{cancer00} through \code{cancer51}) contain measurements for the
-#' prostate cancer subjects.
-#'
-#' @seealso \code{\link{prostz}} for the z-values comparing cancer vs control
-#'
-#' @source \url{https://hastie.su.domains/CASI_files/DATA/prostmat.csv}
-#' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
-#'   Cambridge University Press, Section 3.3.
-NULL
-
-
 #' Prostate Cancer Z-values
 #'
 #' Vector of 6033 z-values comparing gene expression between prostate cancer
@@ -424,28 +403,6 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/prostz.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 3.3, Figure 3.4.
-NULL
-
-
-#' Protein Classification Kernel Matrix
-#'
-#' A 1708 x 1708 inner-product (kernel) matrix derived from 1708 human proteins,
-#' from Section 19.6. Each protein is represented using a bag of N-grams (N=4)
-#' of amino acids, and the kernel was computed using a string kernel (Leslie et al., 2003).
-#'
-#' The corresponding labels are in the \code{protein_label} dataset (not included).
-#'
-#' @name protein_kernel
-#' @docType data
-#' @format A 1708 x 1708 numeric matrix of inner products.
-#'
-#' @source \url{https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt}
-#' @references
-#' Leslie, C., Eskin, E., Cohen, A., Weston, J. and Noble, W.S. (2003). Mismatch
-#'   String Kernels for SVM Protein Classification. \emph{Advances in NIPS 15}.
-#'
-#' Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
-#'   Cambridge University Press, Section 19.6.
 NULL
 
 

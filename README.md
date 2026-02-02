@@ -1,17 +1,17 @@
 
-# CASI
-
 <!-- badges: start -->
 
-[![CRAN_Status](http://www.r-pkg.org/badges/version/CASI)](https://cran.r-project.org/package=CASI)
+[![CRAN_Status](http://www.r-pkg.org/badges/version/CASIdata)](https://cran.r-project.org/package=CASIdata)
 [![Last
-Commit](https://img.shields.io/github/last-commit/friendly/CASI)](https://github.com/friendly/CASI)
+Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
-CASI provides the datasets from Efron & Hastie, *Computer Age
+# CASIdata
+
+CASIdata provides the datasets from Efron & Hastie, *Computer Age
 Statistical Inference* in an accessible R format for those who want to
-use them for study or to try to reproduce analyses from the book. They
-were downloaded from Trevor Hastie’s web site,
+use them for teaching, study or to try to reproduce or extend analyses
+from the book. They were downloaded from Trevor Hastie’s web site,
 <http://hastie.su.domains/CASI_files/DATA/>, but quite a few files were
 messy and required some processing to make into R datasets.
 
@@ -25,7 +25,7 @@ This package is not yet on CRAN. You can install it from this GitHub
 repo:
 
 ``` r
-remotes::install.github("friendly/CASI")
+remotes::install.github("friendly/CASIdata")
 ```
 
 ## Datasets included here
@@ -40,6 +40,7 @@ remotes::install.github("friendly/CASI")
 | `cholesterol` | for an average of seven years each. From Figure 20.1. |
 | `diabetes` | norm. In Table 20.1 they were standardized to unit variance. |
 | `doseresponse` | From Figure 8.2. |
+| `DTI` | three-dimensional brain coordinates (voxels). |
 | `galaxy` | category, and frequency count. |
 | `haplotype` | European, Japanese, and African) at 100 SNP locations. From Section 13.5. |
 | `insurance` | policy holders and the number of deaths. |
@@ -49,35 +50,63 @@ remotes::install.github("friendly/CASI")
 | `pediatric` | Survival data on 1620 children with cancer, from Section 9.4 and Table 9.6. |
 | `police` | value suggests racial bias in policing behavior. |
 | `prostz` | described on page 272. |
-| `protein_kernel` | The corresponding labels are in the  dataset (not included). |
 | `student_score` | Test scores for 22 students on 5 different exams, from Tables 3.1 and 10.1. |
 | `supernova` | The goal is to predict magnitude from spectral energy measurements. |
 | `vasoconstriction` | Data on vasoconstriction (lung constriction) response, from Table 13.2. |
 
 ## Missing Datasets
 
-The following datasets appear in `data-raw/CASI-save.R` but are **not**
+The following dataset appears in `data-raw/CASI-save.R` but is **not**
 (yet) included in the package:
 
 | Dataset | Reason |
 |----|----|
-| `DTI` | Explicitly marked “NOT SAVED” in script (issue with extra `X` column) |
-| `prostmat` | Marked “NOT saved” - needs variable name cleanup (control.1 -\> control.01) |
-| `protein_label` | Not saved; TODO note suggests combining with `protein_kernel` |
-| `SPAM` | Script doesn’t save it; TODO note about cleaning names |
+| `SPAM` | Variable names need cleanup; requires mapping from UCI Spambase documentation |
+
+See `data-raw/missing-datasets.md` for details on resolving this.
 
 ## External Datasets (Not Included)
 
-These large datasets are referenced in the book but hosted externally:
+These large datasets are referenced in the book but not included in the
+package due to size constraints. They can be downloaded directly from
+the sources listed below.
 
-- **CIFAR-100**: 100 image classes, 600 images each (32x32x3 color)
+### CASI datasets (too large for CRAN)
+
+- **protein_kernel**: 1708 x 1708 inner-product (kernel) matrix for
+  human proteins (Section 19.6). Computed using a string kernel on
+  bag-of-4-grams amino acid representations.
+  - Source:
+    <https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt>
+  - Load in R:
+    `protein_kernel <- matrix(scan("http://hastie.su.domains/CASI_files/DATA/protein_kernel.txt", what=0), 1708, 1708)`
+- **protein_label**: Response labels (-1/+1) for the 1708 proteins (45
+  positives, 1663 negatives).
+  - Source:
+    <https://hastie.su.domains/CASI_files/DATA/protein_label.txt>
+  - Load in R:
+    `protein_label <- scan("http://hastie.su.domains/CASI_files/DATA/protein_label.txt", what=0)`
+- **prostmat**: 6033 x 102 gene expression matrix comparing 50 controls
+  vs 52 prostate cancer patients (Section 3.3).
+  - Source: <https://hastie.su.domains/CASI_files/DATA/prostmat.csv>
+  - Load in R:
+    `prostmat <- read.csv("http://hastie.su.domains/CASI_files/DATA/prostmat.csv")`
+  - Note: Column names need cleanup (see `data-raw/missing-datasets.md`
+    for renaming code)
+- **leukemia_big**: 7128 x 72 gene expression matrix (10MB). A larger
+  version of `leukemia_small`.
+  - Source: <https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv>
+  - Load in R:
+    `leukemia_big <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_big.csv")`
+
+### Image datasets (hosted externally)
+
+- **CIFAR-100**: 100 image classes, 600 images each (32x32x3 color).
+  Used in Chapter 18.
   - Source: <https://www.cs.toronto.edu/~kriz/cifar.html>
 - **MNIST**: Handwritten digit database, 60K training + 10K test images
-  (28x28 grayscale)
+  (28x28 grayscale). Used in Chapter 18.
   - Source: <http://yann.lecun.com/exdb/mnist/>
-- **leukemia_big**: 7128 x 72 gene expression matrix (10MB)
-  - Available from:
-    <https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv>
 
 ## Variable Renaming
 
@@ -95,6 +124,6 @@ Some datasets had variables renamed for clarity:
 No examples yet.
 
 ``` r
-library(CASI)
+library(CASIdata)
 ## basic example code
 ```
