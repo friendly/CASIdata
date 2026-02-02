@@ -11,15 +11,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# CASI
+# CASIdata
 
 <!-- badges: start -->
-[![CRAN_Status](http://www.r-pkg.org/badges/version/CASI)](https://cran.r-project.org/package=CASI)
-[![Last Commit](https://img.shields.io/github/last-commit/friendly/CASI)](https://github.com/friendly/CASI)
+[![CRAN_Status](http://www.r-pkg.org/badges/version/CASIdata)](https://cran.r-project.org/package=CASIdata)
+[![Last Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
-CASI provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
-for those who want to use them for study or to try to reproduce analyses from the book.
+CASIdata provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
+for those who want to use them for teaching, study or to try to reproduce or extend analyses from the book.
 They were downloaded from Trevor Hastie's web site, http://hastie.su.domains/CASI_files/DATA/,
 but quite a few files were messy and required some processing to make into R datasets.
 
@@ -31,7 +31,7 @@ other tidying steps to be useful for analysis. But that's part of learning.
 This package is not yet on CRAN. You can install it from this GitHub repo:
 
 ``` r
-remotes::install.github("friendly/CASI")
+remotes::install.github("friendly/CASIdata")
 ```
 
 ## Datasets included here
@@ -122,6 +122,6 @@ Some datasets had variables renamed for clarity:
 No examples yet.
 
 ``` r
-library(CASI)
+library(CASIdata)
 ## basic example code
 ```

@@ -5,8 +5,9 @@
 \alias{baseball}
 \title{Baseball Batting Averages}
 \format{
-A data frame with 18 rows and 2 variables:
+A data frame with 18 rows and 3 variables:
 \describe{
+\item{Player}{Player ID number}
 \item{MLE}{Batting average based on the first 90 at-bats of the season}
 \item{TRUTH}{Batting average for the remainder of the 1970 season}
 }

@@ -1,4 +1,4 @@
-Package: CASI
+Package: CASIdata
 Title: Datasets from Computer Age Statistical Inference
 Version: 0.1.0
 Authors@R: 
@@ -10,5 +10,5 @@ Encoding: UTF-8
 Depends: R (>= 3.5.0)
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-URL: https://github.com/friendly/CASI
-BugReports: https://github.com/friendly/CASI/issues
+URL: https://github.com/friendly/CASIdata
+BugReports: https://github.com/friendly/CASIdata/issues
