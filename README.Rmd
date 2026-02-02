@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 [![Last Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
-# CASIdata
+# CASIdata<img src="man/figures/logo.jpg" style="float:right; height:200px;" />
 
 CASIdata provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
 for those who want to use them for teaching, study or to try to reproduce or extend analyses from the book.

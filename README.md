@@ -6,7 +6,7 @@
 Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
-# CASIdata
+# CASIdata<img src="man/figures/logo.jpg" style="float:right; height:200px;" />
 
 CASIdata provides the datasets from Efron & Hastie, *Computer Age
 Statistical Inference* in an accessible R format for those who want to
