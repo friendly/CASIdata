@@ -1,3 +1,8 @@
+## CASI 0.2.0
+
+* Removed datasets too large for a CRAN package: `protein_kernel`, `prosmat`
+* Added vignette on building a package logo with AI help
+
 ## CASI 0.1.0
 
 * Create R documentation in roxygen format under `R/data.R`

@@ -1,6 +1,6 @@
 Package: CASIdata
 Title: Datasets from Computer Age Statistical Inference
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Michael", "Friendly",
            email = "friendly@yorku.ca", role = c("aut", "cre"))
