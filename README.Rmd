@@ -5,6 +5,8 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
@@ -16,7 +18,7 @@ knitr::opts_chunk$set(
 [![Last Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
-# CASIdata<img src="man/figures/logo.jpg" style="float:right; height:200px;" />
+# CASIdata<img src="man/figures/logo.jpg" style="float:right; height:180px;" />
 
 CASIdata provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
 for those who want to use them for teaching, study or to try to reproduce or extend analyses from the book.
@@ -36,47 +38,10 @@ remotes::install.github("friendly/CASIdata")
 
 ## Datasets included here
 
-```{r datasets, echo=FALSE, results='asis'}
-# Get dataset names from data/ directory
-data_files <- list.files("data", pattern = "\\.RData$", full.names = FALSE)
-dataset_names <- sub("\\.RData$", "", data_files)
 
-# Parse R/data.R to extract titles
-doc_lines <- readLines("R/data.R")
-
-# Find titles by looking for #' Title line followed eventually by #' @name
-get_title <- function(name, lines) {
-  # Find the @name line for this dataset
-  name_pattern <- paste0("^#' @name ", name, "$")
-  name_idx <- grep(name_pattern, lines)
-  if (length(name_idx) == 0) return(NA)
-
-
-  # Search backwards for the title (first #' line after a NULL or start)
-  # The title is typically the first non-empty roxygen line of the block
-  for (i in (name_idx[1] - 1):1) {
-    if (grepl("^NULL$", lines[i]) || grepl("^#' @", lines[i])) next
-    if (grepl("^#'\\s*$", lines[i])) next
-    if (grepl("^#' ", lines[i])) {
-      # Check if this looks like a title (not a @tag, not a continuation)
-      title <- sub("^#' ", "", lines[i])
-      if (!grepl("^@", title) && !grepl("^\\\\", title)) {
-        return(title)
-      }
-    }
-    if (!grepl("^#'", lines[i])) break
-  }
-  return(NA)
-}
-
-# Build data frame of datasets and titles
-datasets_df <- data.frame(
-  Dataset = paste0("`", dataset_names, "`"),
-  Title = sapply(dataset_names, function(n) get_title(n, doc_lines)),
-  stringsAsFactors = FALSE
-)
-
-# Print as markdown table
+```{r datasets-vcdExtra, echo=FALSE, message=FALSE, results='asis'}
+datasets_df <- vcdExtra::datasets("CASIdata")[, c("Item", "Title")]
+names(datasets_df)[1] <- "Dataset"
 knitr::kable(datasets_df, row.names = FALSE)
 ```
 
