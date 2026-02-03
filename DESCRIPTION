@@ -10,7 +10,8 @@ Encoding: UTF-8
 Depends: R (>= 3.5.0)
 Suggests:
     knitr,
-    rmarkdown
+    rmarkdown,
+    vcdExtra
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
