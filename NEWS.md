@@ -2,6 +2,7 @@
 
 * Removed datasets too large for a CRAN package: `protein_kernel`, `prosmat`
 * Added vignette on building a package logo with AI help
+* Build pkgdown site
 
 ## CASI 0.1.0
 
