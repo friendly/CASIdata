@@ -6,13 +6,14 @@
 
 0 errors | 0 warnings | 1 note
 
+* This is a new submission.
+
 * Possibly misspelled words in DESCRIPTION:
   Efron (7:41)
   Hastie (7:49)
 
   These are false positives -- they're the names of authors
 
-* This is a new submission.
 
 ## Version 0.2.0
 

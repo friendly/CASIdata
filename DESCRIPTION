@@ -1,6 +1,6 @@
 Package: CASIdata
 Title: Datasets from Computer Age Statistical Inference
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     person("Michael", "Friendly",
            email = "friendly@yorku.ca", role = c("aut", "cre"))
@@ -11,7 +11,8 @@ Depends: R (>= 3.5.0)
 Suggests:
     knitr,
     rmarkdown,
-    vcdExtra
+    vcdExtra,
+    car
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3

@@ -271,13 +271,22 @@ NULL
 #' data(galaxy)
 #' str(galaxy)
 #'
+#' library(car)
+#'
 #' ## Fit a main effects Poisson GLM
 #' # This treats `mag` and `red` as numeric
-#'
 #' galaxy.mod0 <- glm(freq ~ mag + red,
 #'                    data = galaxy, family = poisson)
 #' Anova(galaxy.mod0)
-#' deviance(galaxy.mod0)
+#'
+#' ## Fit response surface model
+#' galaxy.mod1 <- glm(freq ~ poly(mag,2) +
+#'                      poly(red, 2) +
+#'                      mag : red,
+#'                    data = galaxy, family = poisson)
+#' Anova(galaxy.mod1)
+#' summary(galaxy.mod1)
+
 
 NULL
 

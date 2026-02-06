@@ -1,10 +1,14 @@
+## Version 0.2.1
+
+* Added basic examples to all datasets
+* Added model fits for `galaxy` data
+
 ## Version 0.2.0
 
 * Removed datasets too large for a CRAN package: `protein_kernel`, `prosmat`
 * Added vignette on building a package logo with AI help
 * Build pkgdown site
 * Fixed http:// links
-* Added basic examples to all datasets
 
 ## Version 0.1.0
 
