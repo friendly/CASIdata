@@ -1,15 +1,4 @@
-
-<!-- badges: start -->
-
-[![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![CRAN_Status](http://www.r-pkg.org/badges/version/CASIdata)](https://cran.r-project.org/package=CASIdata)
-[![R-Universe](https://friendly.r-universe.dev/badges/CASIdata)](https://friendly.r-universe.dev)
-[![Last
-Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
-<!-- badges: end -->
-
-# CASIdata <img src="man/figures/logo.jpg" style="float:right; height:180px;" alt="CASIdata logo"/>
+# CASIdata ![CASIdata logo](reference/figures/logo.jpg)
 
 CASIdata provides the datasets from Efron & Hastie, *Computer Age
 Statistical Inference* in an accessible R format for those who want to

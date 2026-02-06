@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN_Status](http://www.r-pkg.org/badges/version/CASIdata)](https://cran.r-project.org/package=CASIdata)
+[![R-Universe](https://friendly.r-universe.dev/badges/CASIdata)](https://friendly.r-universe.dev)
 [![Last Commit](https://img.shields.io/github/last-commit/friendly/CASIdata)](https://github.com/friendly/CASIdata)
 <!-- badges: end -->
 
@@ -41,7 +42,7 @@ remotes::install.github("friendly/CASIdata")
 
 
 ```{r datasets-vcdExtra, echo=FALSE, message=FALSE, results='asis'}
-datasets_df <- vcdExtra::datasets("CASIdata")[, c("Item", "Title")]
+datasets_df <- vcdExtra::datasets("CASIdata")[, c("Item", "dim", "Title")]
 names(datasets_df)[1] <- "Dataset"
 knitr::kable(datasets_df, row.names = FALSE)
 ```
