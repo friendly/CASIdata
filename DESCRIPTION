@@ -16,5 +16,6 @@ Suggests:
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+Language: en-US
 URL: https://github.com/friendly/CASIdata, https://friendly.github.io/CASIdata/
 BugReports: https://github.com/friendly/CASIdata/issues
