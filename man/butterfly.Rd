@@ -18,6 +18,10 @@ A data frame with 24 rows and 2 variables:
 Number of butterfly species seen a given number of times each in two years of trapping.
 From Table 6.2. This is a frequency data frame.
 }
+\examples{
+data(butterfly)
+str(butterfly)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 6.2.

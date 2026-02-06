@@ -39,6 +39,9 @@
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/ALS.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 17.2.
+#' @examples
+#' data(als)
+#' str(als)
 NULL
 
 
@@ -60,6 +63,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/baseball.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 7.1.
+#' @examples
+#' data(baseball)
+#' str(baseball)
 NULL
 
 
@@ -79,6 +85,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/bivnorm.csv}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 9.3.
+#' @examples
+#' data(bivnorm)
+#' str(bivnorm)
 NULL
 
 
@@ -98,6 +107,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/butterfly.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 6.2.
+#' @examples
+#' data(butterfly)
+#' str(butterfly)
 NULL
 
 
@@ -119,6 +131,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/cellinfusion.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 8.2.
+#' @examples
+#' data(cellinfusion)
+#' str(cellinfusion)
 NULL
 
 
@@ -138,6 +153,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/cholesterol.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 20.1.
+#' @examples
+#' data(cholesterol)
+#' str(cholesterol)
 NULL
 
 
@@ -178,6 +196,9 @@ NULL
 #'
 #' Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 7.3.
+#' @examples
+#' data(diabetes)
+#' str(diabetes)
 NULL
 
 
@@ -200,6 +221,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/DTI.csv}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figures 15.9 and 15.10.
+#' @examples
+#' data(DTI)
+#' str(DTI)
 NULL
 
 
@@ -219,6 +243,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/doseresponse.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 8.2.
+#' @examples
+#' data(doseresponse)
+#' str(doseresponse)
 NULL
 
 
@@ -240,6 +267,18 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/galaxy.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 8.5.
+#' @examples
+#' data(galaxy)
+#' str(galaxy)
+#'
+#' ## Fit a main effects Poisson GLM
+#' # This treats `mag` and `red` as numeric
+#'
+#' galaxy.mod0 <- glm(freq ~ mag + red,
+#'                    data = galaxy, family = poisson)
+#' Anova(galaxy.mod0)
+#' deviance(galaxy.mod0)
+
 NULL
 
 
@@ -259,6 +298,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/haplotype.csv}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 13.5.
+#' @examples
+#' data(haplotype)
+#' str(haplotype)
 NULL
 
 
@@ -279,6 +321,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/insurance.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 9.1.
+#' @examples
+#' data(insurance)
+#' str(insurance)
 NULL
 
 
@@ -302,6 +347,9 @@ NULL
 #'
 #' Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 19.1.
+#' @examples
+#' data(leukemia_small)
+#' str(leukemia_small)
 NULL
 
 
@@ -325,6 +373,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/ncog.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 9.2.
+#' @examples
+#' data(ncog)
+#' str(ncog)
 NULL
 
 
@@ -343,6 +394,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/nodes.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 6.3.
+#' @examples
+#' data(nodes)
+#' str(nodes)
 NULL
 
 
@@ -366,6 +420,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/pediatric.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 9.4, Table 9.6.
+#' @examples
+#' data(pediatric)
+#' str(pediatric)
 NULL
 
 
@@ -384,6 +441,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/police.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 15.7.
+#' @examples
+#' data(police)
+#' str(police)
 NULL
 
 
@@ -403,6 +463,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/prostz.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Section 3.3, Figure 3.4.
+#' @examples
+#' data(prostz)
+#' str(prostz)
 NULL
 
 
@@ -424,6 +487,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/student_score.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Tables 3.1 and 10.1.
+#' @examples
+#' data(student_score)
+#' str(student_score)
 NULL
 
 
@@ -453,6 +519,9 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/supernova.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Figure 12.1, Table 12.1.
+#' @examples
+#' data(supernova)
+#' str(supernova)
 NULL
 
 
@@ -471,4 +540,7 @@ NULL
 #' @source \url{https://hastie.su.domains/CASI_files/DATA/vasoconstriction.txt}
 #' @references Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 #'   Cambridge University Press, Table 13.2.
+#' @examples
+#' data(vasoconstriction)
+#' str(vasoconstriction)
 NULL

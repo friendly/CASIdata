@@ -20,6 +20,10 @@ Batting averages for 18 Major League players in the 1970 season, from Table 7.1.
 This dataset illustrates empirical Bayes estimation, where early-season performance
 is used to predict full-season batting averages.
 }
+\examples{
+data(baseball)
+str(baseball)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 7.1.

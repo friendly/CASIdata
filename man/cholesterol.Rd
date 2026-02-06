@@ -18,6 +18,10 @@ A data frame with 164 rows and 2 variables:
 Cholestyramine, a proposed cholesterol lowering drug, was administered to 164 men
 for an average of seven years each. From Figure 20.1.
 }
+\examples{
+data(cholesterol)
+str(cholesterol)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 20.1.

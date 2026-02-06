@@ -19,6 +19,10 @@ Science paper. This smaller subset contains 3571 genes and is used in Section 19
 \details{
 A larger dataset with 7128 genes is also available from the CASI website.
 }
+\examples{
+data(leukemia_small)
+str(leukemia_small)
+}
 \references{
 Golub, T.R., et al. (1999). Molecular Classification of Cancer: Class Discovery
 and Class Prediction by Gene Expression Monitoring. \emph{Science}, 286, 531-537.

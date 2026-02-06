@@ -17,6 +17,10 @@ A data frame with 39 rows and 2 variables:
 \description{
 Data on vasoconstriction (lung constriction) response, from Table 13.2.
 }
+\examples{
+data(vasoconstriction)
+str(vasoconstriction)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 13.2.

@@ -36,6 +36,10 @@ First used in the LARS paper (Efron et al., 2004).
 Note: In Table 7.2, the centered predictor variables were standardized to unit L2
 norm. In Table 20.1 they were standardized to unit variance.
 }
+\examples{
+data(diabetes)
+str(diabetes)
+}
 \references{
 Efron, B., Hastie, T., Johnstone, I. and Tibshirani, R. (2004). Least Angle Regression.
 \emph{Annals of Statistics}, 32(2), 407-499.

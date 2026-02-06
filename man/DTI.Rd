@@ -21,6 +21,10 @@ Diffusion Tensor Imaging (DTI) data comparing 6 dyslexic children with 6 normal
 controls, from Figures 15.9 and 15.10. Z scores were computed at 15,443
 three-dimensional brain coordinates (voxels).
 }
+\examples{
+data(DTI)
+str(DTI)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figures 15.9 and 15.10.

@@ -20,6 +20,10 @@ A data frame with 22 rows and 5 variables:
 \description{
 Test scores for 22 students on 5 different exams, from Tables 3.1 and 10.1.
 }
+\examples{
+data(student_score)
+str(student_score)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Tables 3.1 and 10.1.

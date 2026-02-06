@@ -28,6 +28,10 @@ Measurements from 39 Type Ia supernovas, from Figure 12.1 and Table 12.1.
 These supernovas were close enough to Earth to observe their actual magnitudes.
 The goal is to predict magnitude from spectral energy measurements.
 }
+\examples{
+data(supernova)
+str(supernova)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 12.1, Table 12.1.

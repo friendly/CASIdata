@@ -18,6 +18,10 @@ missing values.
 Genotype data for 197 US individuals from 4 racial groups (African American,
 European, Japanese, and African) at 100 SNP locations. From Section 13.5.
 }
+\examples{
+data(haplotype)
+str(haplotype)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 13.5.

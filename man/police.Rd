@@ -17,6 +17,10 @@ A data frame with 2749 rows and 1 variable:
 Z scores for 2749 New York City police officers, from Figure 15.7. A large
 value suggests racial bias in policing behavior.
 }
+\examples{
+data(police)
+str(police)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 15.7.

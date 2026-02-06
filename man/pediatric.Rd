@@ -22,6 +22,10 @@ A data frame with 1620 rows and 7 variables:
 \description{
 Survival data on 1620 children with cancer, from Section 9.4 and Table 9.6.
 }
+\examples{
+data(pediatric)
+str(pediatric)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 9.4, Table 9.6.

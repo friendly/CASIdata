@@ -18,6 +18,10 @@ A data frame with 40 rows and 2 variables:
 40 points generated from a bivariate normal distribution, with some entries missing.
 From Figure 9.3.
 }
+\examples{
+data(bivnorm)
+str(bivnorm)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 9.3.

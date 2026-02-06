@@ -44,6 +44,10 @@ DREAM challenge prediction prize in 2012 (Kuffner et al., 2015). It includes
 some additional variables created by them. Their winning entry used Bayesian
 trees, not too different from random forests.
 }
+\examples{
+data(als)
+str(als)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 17.2.

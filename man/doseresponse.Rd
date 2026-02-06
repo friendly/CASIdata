@@ -18,6 +18,10 @@ A data frame with 11 rows and 2 variables:
 Data from 11 groups of mice (10 each) exposed to drug Xilathon at different doses.
 From Figure 8.2.
 }
+\examples{
+data(doseresponse)
+str(doseresponse)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Figure 8.2.

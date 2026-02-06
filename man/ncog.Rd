@@ -22,6 +22,10 @@ A data frame with survival time information and variables:
 Head and neck cancer survival data from the Northern California Oncology Group
 (NCOG), from Section 9.2. Patients were randomized to one of two treatment arms.
 }
+\examples{
+data(ncog)
+str(ncog)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Section 9.2.

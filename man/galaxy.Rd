@@ -20,6 +20,18 @@ Counts of galaxies binned by redshift and magnitude, from Table 8.5. The data
 have been reshaped into long format with variables for magnitude, redshift
 category, and frequency count.
 }
+\examples{
+data(galaxy)
+str(galaxy)
+
+## Fit a main effects Poisson GLM
+# This treats `mag` and `red` as numeric
+
+galaxy.mod0 <- glm(freq ~ mag + red,
+                   data = galaxy, family = poisson)
+Anova(galaxy.mod0)
+deviance(galaxy.mod0)
+}
 \references{
 Efron, B. and Hastie, T. (2016). \emph{Computer Age Statistical Inference}.
 Cambridge University Press, Table 8.5.
