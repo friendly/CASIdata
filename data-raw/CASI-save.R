@@ -10,7 +10,7 @@ library(dplyr)
 #' The first variable in the file is `testset`, a logical variable indicating our devision into a training (FALSE) and a test (TRUE) set.
 #' The next variable `dFRS` is the response, and the remaining columns are predictors.
 #
-als <- read.table("http://hastie.su.domains/CASI_files/DATA/ALS.txt",
+als <- read.table("https://hastie.su.domains/CASI_files/DATA/ALS.txt",
                   header=TRUE)
 dim(als)
 # should use janitor::clean_names() !
@@ -23,7 +23,7 @@ save(als, file = here::here("data", "als.RData"))
 #' The column labelled `MLE` is the batting average for 18 players in the 1970 season, using the first 90 at bats.
 #' The column labelled `TRUTH` is the batting average for the remainder of the 1970 season.
 
-baseball <- read.table("http://hastie.su.domains/CASI_files/DATA/baseball.txt",
+baseball <- read.table("https://hastie.su.domains/CASI_files/DATA/baseball.txt",
                        header=TRUE)
 
 str(baseball)
@@ -36,7 +36,7 @@ save(baseball, file = here::here("data", "baseball.RData"))
 #' 40 points generated from a bivariate normal distribution, with some entries missing.
 #' Variables are: `X1, X2`
 
-bivnorm <- read.csv("http://hastie.su.domains/CASI_files/DATA/bivnorm.csv")
+bivnorm <- read.csv("https://hastie.su.domains/CASI_files/DATA/bivnorm.csv")
 
 str(bivnorm)
 summary(bivnorm)
@@ -54,7 +54,7 @@ save(bivnorm, file = here::here("data", "bivnorm.RData"))
 #'
 #' **NB**: This is what I call a "frequency data frame". I would label the variables `k` and `count`
 
-butterfly <-  read.table("http://hastie.su.domains/CASI_files/DATA/butterfly.txt",
+butterfly <-  read.table("https://hastie.su.domains/CASI_files/DATA/butterfly.txt",
                          header=TRUE)
 
 str(butterfly)
@@ -71,7 +71,7 @@ save(butterfly, file = here::here("data", "butterfly.RData"))
 #' Human cell colonies infused with mouse nuclei in 5 different ratios over 1 to 5 days.
 #' Outcome is the number that `thrived` out of the colony of size `N`
 
-cellinfusion <-read.table("http://hastie.su.domains/CASI_files/DATA/cellinfusion.txt",
+cellinfusion <-read.table("https://hastie.su.domains/CASI_files/DATA/cellinfusion.txt",
                           header=TRUE)
 
 str(cellinfusion)
@@ -86,7 +86,7 @@ save(cellinfusion, file = here::here("data", "cellinfusion.RData"))
 #' The response variable is a man's decrease in cholesterol level over the course of the experiment.
 #' The single predictor is compliance, the fraction of intended dose actually taken (standardized)
 
-cholesterol<- read.table("http://hastie.su.domains/CASI_files/DATA/cholesterol.txt",
+cholesterol<- read.table("https://hastie.su.domains/CASI_files/DATA/cholesterol.txt",
                          header=TRUE)
 str(cholesterol)
 
@@ -113,7 +113,7 @@ save(cholesterol, file = here::here("data", "cholesterol.RData"))
 #'
 #' Please note: in table 7.2, we standardized the centered predictor variables to be unit L2 norm. In table 20.1 we standardized to be unit variance. The unit norm standardization was inherited from our work on LARS, where Euclidean geometry played a role.
 
-diabetes <- read.csv("http://hastie.su.domains/CASI_files/DATA/diabetes.csv")
+diabetes <- read.csv("https://hastie.su.domains/CASI_files/DATA/diabetes.csv")
 
 #' The variable names are:
 #'
@@ -129,7 +129,7 @@ save(diabetes, file = here::here("data", "diabetes.RData"))
 #' The `Dose` is on the log scale, each time a doubling.
 #' The response `Proportion` is the fraction that died at that dose.
 
-doseresponse <- read.table("http://hastie.su.domains/CASI_files/DATA/doseresponse.txt",
+doseresponse <- read.table("https://hastie.su.domains/CASI_files/DATA/doseresponse.txt",
                            header=TRUE)
 str(doseresponse)
 
@@ -145,7 +145,7 @@ save(doseresponse, file = here::here("data", "doseresponse.RData"))
 #' * `y` (left to right) and
 #' * `z` (bottom to top) (see figures for details).
 
-DTI <- read.csv("http://hastie.su.domains/CASI_files/DATA/DTI.csv")
+DTI <- read.csv("https://hastie.su.domains/CASI_files/DATA/DTI.csv")
 str(DTI)
 
 ## Something weird here
@@ -166,7 +166,7 @@ str(DTI)
 #'
 #' **NB**: Variable names have an inconsistent pattern.
 
-galaxy <- read.table("http://hastie.su.domains/CASI_files/DATA/galaxy.txt",
+galaxy <- read.table("https://hastie.su.domains/CASI_files/DATA/galaxy.txt",
                   header=TRUE)
 str(galaxy)
 # fix awful row/column names
@@ -217,7 +217,7 @@ save(galaxy, file = here::here("data", "galaxy.RData"))
 #' 197 US individuals from 4 different racial groups African American, European, Japanese, and African.
 #' For each we have the genotype (values 0,1 or 2) at 100 SNPs, with missing values indicated by `NA`.
 
-haplotype <- read.csv("http://hastie.su.domains/CASI_files/DATA/haplotype.csv")
+haplotype <- read.csv("https://hastie.su.domains/CASI_files/DATA/haplotype.csv")
 names(haplotype)
 
 save(haplotype, file = here::here("data", "haplotype.RData"))
@@ -228,7 +228,7 @@ save(haplotype, file = here::here("data", "haplotype.RData"))
 #' Insurance company life table.
 #' At each `age`, `n` is the number of policy holders, and `y` the number of deaths.
 
-insurance <- read.table("http://hastie.su.domains/CASI_files/DATA/insurance.txt",
+insurance <- read.table("https://hastie.su.domains/CASI_files/DATA/insurance.txt",
                         header=TRUE)
 str(insurance)
 
@@ -244,13 +244,13 @@ save(insurance, file = here::here("data", "insurance.RData"))
 #' It is stored as the 7128 x 72 matrix (10MB) `leukemia_big.csv`, with the column names denoting the class labels.
 #' The histograms in Figure 1.4 arise from row 136 of this matrix, and the histogram in Figure 1.5 is of the 7128 two-sample t-test statistics on the rows (genes).
 #' The data can be read directly into R via the command
-#' leukemia_big <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_big.csv")
+#' leukemia_big <- read.csv("https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv")
 #'
 #' There is also a smaller subset of these data, consisting of 3571 genes, used in Section 19.1.
 #' It is stored as the 3571 x 72 matrix (5MB) leukemia_small.csv, with again the column names denoting the class labels.
 #' The data can be read directly into R via the command
 #'
-#' `leukemia_small <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_small.csv")`
+#' `leukemia_small <- read.csv("https://hastie.su.domains/CASI_files/DATA/leukemia_small.csv")`
 #'
 #' Disclaimer: these data come with a data analysis challenge.
 #' The columns of the two datasets are in different order.
@@ -258,7 +258,7 @@ save(insurance, file = here::here("data", "insurance.RData"))
 #' We also do not know the correspondence between the 3157 and 7128 genes.
 #' The first person to solve this puzzle completely will be thanked and their name will appear forever on this page.
 
-leukemia_small <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_small.csv")
+leukemia_small <- read.csv("https://hastie.su.domains/CASI_files/DATA/leukemia_small.csv")
 names(leukemia_small)
 
 save(leukemia_small, file = here::here("data", "leukemia_small.RData"))
@@ -273,7 +273,7 @@ save(leukemia_small, file = here::here("data", "leukemia_small.RData"))
 #' * `"A"`: Chemotherapy,
 #' * `"B"` Chemotherapy + Radiation
 
-ncog <- read.table("http://hastie.su.domains/CASI_files/DATA/ncog.txt",
+ncog <- read.table("https://hastie.su.domains/CASI_files/DATA/ncog.txt",
                    header=TRUE)
 str(ncog)
 
@@ -288,7 +288,7 @@ save(ncog, file = here::here("data", "ncog.RData"))
 #' * `n` the number of nodes removed,
 #' * `x` the number found to be positive (malignant).
 
-nodes <- read.table("http://hastie.su.domains/CASI_files/DATA/nodes.txt",
+nodes <- read.table("https://hastie.su.domains/CASI_files/DATA/nodes.txt",
                     header=TRUE)
 str(nodes)
 
@@ -306,7 +306,7 @@ save(nodes, file = here::here("data", "nodes.RData"))
 #' * `t`: survival time in days;
 #' * `d`: 1 if death observed, 0 if not.
 
-pediatric <- read.table("http://hastie.su.domains/CASI_files/DATA/pediatric.txt",
+pediatric <- read.table("https://hastie.su.domains/CASI_files/DATA/pediatric.txt",
                         header=TRUE)
 str(pediatric)
 
@@ -319,7 +319,7 @@ save(pediatric, file = here::here("data", "pediatric.RData"))
 #'
 #' A large value suggests racial bias.
 
-police <- read.table("http://hastie.su.domains/CASI_files/DATA/police.txt",
+police <- read.table("https://hastie.su.domains/CASI_files/DATA/police.txt",
                      header=TRUE)
 str(police)
 
@@ -340,7 +340,7 @@ save(police, file = here::here("data", "police.RData"))
 #' while the last 52 columns represent the prostate cancer subjects.
 #'
 
-prostmat <- read.csv("http://hastie.su.domains/CASI_files/DATA/prostmat.csv")
+prostmat <- read.csv("https://hastie.su.domains/CASI_files/DATA/prostmat.csv")
 names(prostmat)
 
 # > names(prostmat)
@@ -364,7 +364,7 @@ names(prostmat)
 
 #' `prostz` is the vector of 6033 z-values pictured in Figure 3.4. These were obtained as describe on page 272.
 #'
-prostz <- read.table("http://hastie.su.domains/CASI_files/DATA/prostz.txt",
+prostz <- read.table("https://hastie.su.domains/CASI_files/DATA/prostz.txt",
                      header=TRUE)
 str(prostz)
 
@@ -387,7 +387,7 @@ save(prostz, file = here::here("data", "prostz.RData"))
 #' This was computed using a string kernel (Leslie et al. 2003).
 #'
 
-protein_kernel <- matrix(scan("http://hastie.su.domains/CASI_files/DATA/protein_kernel.txt",
+protein_kernel <- matrix(scan("https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt",
                               what=0),
                          1708, 1708)
 dim(protein_kernel)
@@ -399,7 +399,7 @@ save(protein_kernel, file = here::here("data", "protein_kernel.RData"))
 #' The response label takes values [-1, +1], there being 45 pluses (particular protein class), and 1663 minuses.
 #' The idea is to build a classifier
 #'
-protein_label <- scan("http://hastie.su.domains/CASI_files/DATA/protein_label.txt",
+protein_label <- scan("https://hastie.su.domains/CASI_files/DATA/protein_label.txt",
                       what=0)
 dim(protein_label)
 
@@ -424,7 +424,7 @@ dim(protein_label)
 #' `testid` Logical variable. An optional split into train (FALSE) and test (TRUE) data (as used in, for example "Elements of Statistical Learning").
 #' The remainder of the columns are features used to build a prediction model.
 
-SPAM <- read.csv("http://hastie.su.domains/CASI_files/DATA/SPAM.csv")
+SPAM <- read.csv("https://hastie.su.domains/CASI_files/DATA/SPAM.csv")
 dim(SPAM)
 names(SPAM)
 
@@ -439,7 +439,7 @@ names(SPAM)
 
 #' student_score.txt is the 22x5 matrix of student scores as used in Table 10.1 and Table 3.1.
 
-student_score <- read.table("http://hastie.su.domains/CASI_files/DATA/student_score.txt",
+student_score <- read.table("https://hastie.su.domains/CASI_files/DATA/student_score.txt",
                             header=TRUE)
 str(student_score)
 
@@ -458,7 +458,7 @@ save(student_score, file = here::here("data", "student_score.RData"))
 #' These supernovas were close enough to to earth to actually observe their magnitudes. The idea is to build a model for predicting the magnitude based on the 10 energy measurements.
 
 
-supernova <- read.table("http://hastie.su.domains/CASI_files/DATA/supernova.txt", header=TRUE)
+supernova <- read.table("https://hastie.su.domains/CASI_files/DATA/supernova.txt", header=TRUE)
 str(supernova)
 
 save(supernova, file = here::here("data", "supernova.RData"))
@@ -471,7 +471,7 @@ save(supernova, file = here::here("data", "supernova.RData"))
 #' `volume`
 #' * lung `constriction` : `TRUE` or `FALSE`
 
-vasoconstriction <- read.table("http://hastie.su.domains/CASI_files/DATA/vasoconstriction.txt",
+vasoconstriction <- read.table("https://hastie.su.domains/CASI_files/DATA/vasoconstriction.txt",
                                header=TRUE)
 str(vasoconstriction)
 

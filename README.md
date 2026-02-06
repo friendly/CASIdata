@@ -14,7 +14,7 @@ CASIdata provides the datasets from Efron & Hastie, *Computer Age
 Statistical Inference* in an accessible R format for those who want to
 use them for teaching, study or to try to reproduce or extend analyses
 from the book. They were downloaded from Trevor Hastie’s web site,
-<http://hastie.su.domains/CASI_files/DATA/>, but quite a few files were
+<https://hastie.su.domains/CASI_files/DATA/>, but quite a few files were
 messy and required some processing to make into R datasets.
 
 Even so, some of the datasets may require data cleaning, renaming of
@@ -83,25 +83,25 @@ the sources listed below.
   - Source:
     <https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt>
   - Load in R:
-    `protein_kernel <- matrix(scan("http://hastie.su.domains/CASI_files/DATA/protein_kernel.txt", what=0), 1708, 1708)`
+    `protein_kernel <- matrix(scan("https://hastie.su.domains/CASI_files/DATA/protein_kernel.txt", what=0), 1708, 1708)`
 - **protein_label**: Response labels (-1/+1) for the 1708 proteins (45
   positives, 1663 negatives).
   - Source:
     <https://hastie.su.domains/CASI_files/DATA/protein_label.txt>
   - Load in R:
-    `protein_label <- scan("http://hastie.su.domains/CASI_files/DATA/protein_label.txt", what=0)`
+    `protein_label <- scan("https://hastie.su.domains/CASI_files/DATA/protein_label.txt", what=0)`
 - **prostmat**: 6033 x 102 gene expression matrix comparing 50 controls
   vs 52 prostate cancer patients (Section 3.3).
   - Source: <https://hastie.su.domains/CASI_files/DATA/prostmat.csv>
   - Load in R:
-    `prostmat <- read.csv("http://hastie.su.domains/CASI_files/DATA/prostmat.csv")`
+    `prostmat <- read.csv("https://hastie.su.domains/CASI_files/DATA/prostmat.csv")`
   - Note: Column names need cleanup (see `data-raw/missing-datasets.md`
     for renaming code)
 - **leukemia_big**: 7128 x 72 gene expression matrix (10MB). A larger
   version of `leukemia_small`.
   - Source: <https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv>
   - Load in R:
-    `leukemia_big <- read.csv("http://hastie.su.domains/CASI_files/DATA/leukemia_big.csv")`
+    `leukemia_big <- read.csv("https://hastie.su.domains/CASI_files/DATA/leukemia_big.csv")`
 
 ### Image datasets (hosted externally)
 

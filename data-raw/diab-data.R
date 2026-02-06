@@ -1,6 +1,6 @@
 library(tidyverse)
 
-diabetes <- read.csv("http://hastie.su.domains/CASI_files/DATA/diabetes.csv")
+diabetes <- read.csv("https://hastie.su.domains/CASI_files/DATA/diabetes.csv")
 
 #' The variable names are:
 #' 
