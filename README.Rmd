@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 # CASIdata <img src="man/figures/logo.jpg" style="float:right; height:180px;" alt="CASIdata logo"/>
 
-CASIdata provides the datasets from Efron & Hastie, _Computer Age Statistical Inference_ in an accessible R format
+CASIdata provides the datasets from Efron & Hastie (2016, ISBN: 9781108107952), _Computer Age Statistical Inference: Algorithms, Evidence, and Data Science_ in an accessible R format
 for those who want to use them for teaching, study or to try to reproduce or extend analyses from the book.
 They were downloaded from Trevor Hastie's web site, https://hastie.su.domains/CASI_files/DATA/,
 but quite a few files were messy and required some processing to make into R datasets.
