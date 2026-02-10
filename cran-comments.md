@@ -14,6 +14,12 @@
 
   These are false positives -- they're the names of authors
 
+## Version 0.2.1
+
+* Fixed Description: to have the proper form for the reference: form authors (year, ISBN:...) ...
+* Added basic examples to all datasets
+* Added model fits for `galaxy` data
+
 
 ## Version 0.2.0
 
