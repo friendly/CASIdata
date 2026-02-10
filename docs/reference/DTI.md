@@ -32,3 +32,15 @@ A data frame with 15443 rows and 4 variables:
 
 Efron, B. and Hastie, T. (2016). *Computer Age Statistical Inference*.
 Cambridge University Press, Figures 15.9 and 15.10.
+
+## Examples
+
+``` r
+data(DTI)
+str(DTI)
+#> 'data.frame':    15443 obs. of  4 variables:
+#>  $ x     : int  33 34 35 36 32 33 34 35 36 37 ...
+#>  $ y     : int  17 17 17 17 18 18 18 18 18 18 ...
+#>  $ z     : int  24 24 24 24 24 24 24 24 24 24 ...
+#>  $ Zscore: num  -2.016 -0.802 -0.525 -0.382 0.763 ...
+```

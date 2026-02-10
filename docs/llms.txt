@@ -1,11 +1,12 @@
 # CASIdata ![CASIdata logo](reference/figures/logo.jpg)
 
-CASIdata provides the datasets from Efron & Hastie, *Computer Age
-Statistical Inference* in an accessible R format for those who want to
-use them for teaching, study or to try to reproduce or extend analyses
-from the book. They were downloaded from Trevor Hastie’s web site,
-<https://hastie.su.domains/CASI_files/DATA/>, but quite a few files were
-messy and required some processing to make into R datasets.
+CASIdata provides the datasets from Efron & Hastie (2016, ISBN:
+9781108107952), *Computer Age Statistical Inference: Algorithms,
+Evidence, and Data Science* in an accessible R format for those who want
+to use them for teaching, study or to try to reproduce or extend
+analyses from the book. They were downloaded from Trevor Hastie’s web
+site, <https://hastie.su.domains/CASI_files/DATA/>, but quite a few
+files were messy and required some processing to make into R datasets.
 
 Even so, some of the datasets may require data cleaning, renaming of
 variables, re-shaping or other tidying steps to be useful for analysis.
@@ -13,11 +14,13 @@ But that’s part of learning.
 
 ## Installation
 
-This package is not yet on CRAN. You can install it from this GitHub
-repo:
+This package is not yet on CRAN. You can install it from this
+[GitHub](https://github.com/friendly/CASIdata/) repo or from
+[R-universe](https://friendly.r-universe.dev/CASIdata)
 
 ``` r
 remotes::install.github("friendly/CASIdata")
+install.packages('CASIdata', repos = c('https://friendly.r-universe.dev'))
 ```
 
 ## Datasets included here

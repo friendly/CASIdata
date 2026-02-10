@@ -27,3 +27,14 @@ A data frame with rows for each age group and 3 variables:
 
 Efron, B. and Hastie, T. (2016). *Computer Age Statistical Inference*.
 Cambridge University Press, Table 9.1.
+
+## Examples
+
+``` r
+data(insurance)
+str(insurance)
+#> 'data.frame':    60 obs. of  3 variables:
+#>  $ age: int  30 31 32 33 34 35 36 37 38 39 ...
+#>  $ n  : int  116 44 95 97 120 71 125 122 82 113 ...
+#>  $ y  : int  0 0 0 0 0 1 0 0 0 0 ...
+```

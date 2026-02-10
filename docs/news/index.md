@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 0.2.1
+
+- Added basic examples to all datasets
+- Added model fits for `galaxy` data
+
 ## Version 0.2.0
 
 - Removed datasets too large for a CRAN package: `protein_kernel`,

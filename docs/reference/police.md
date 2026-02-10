@@ -19,3 +19,12 @@ A data frame with 2749 rows and 1 variable:
 
 Efron, B. and Hastie, T. (2016). *Computer Age Statistical Inference*.
 Cambridge University Press, Figure 15.7.
+
+## Examples
+
+``` r
+data(police)
+str(police)
+#> 'data.frame':    2748 obs. of  1 variable:
+#>  $ z: num  0.161 -0.852 0.151 1.836 2.04 ...
+```
